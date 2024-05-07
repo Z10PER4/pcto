@@ -10,11 +10,21 @@ int main()
     
     if (a+b>c && b+c>a && c+a>b)
     {
-        printf("Le misure date possono essere la lunghezza dei lati del triangolo\n");
+        if (a==b && b==c)
+        {
+            printf("Le misure date possono essere la lunghezza dei lati di triangolo equilatero\n");
+        }
+        else if ((a==b && a!=c)||(a==c && c!=b)||(b==c && b!=a))
+        {
+            printf("le misure date possono essere la lunghezza dei lati di un triangolo isoscele\n");
+        }
+        else
+        {
+            printf("Le misure date possono essere la lunghezza dei lati del triangolo scaleno\n"); 
+        }
     }
-
     else
     {
-        printf("le misure non possono essere la lunghezza dei lati del triangolo\n");
+        printf("le misure date non possono essere la lunghezza dei lati di un triangolo\n");
     }
 }
