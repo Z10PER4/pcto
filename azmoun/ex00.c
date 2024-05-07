@@ -13,6 +13,6 @@ int main()
     int g = 84;
 
     a = 71;
-    printf("moltiplicazione: %d\n", a*b);
+    printf("a: %c\nb: %c\nc: %c\nd: %c\ne: %c\nf: %c\ng: %c\n", a, b, c, d, e, f, g);
 
 }

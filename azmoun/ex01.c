@@ -6,8 +6,8 @@ int main()
 
     //VARIABILI//
 
-    int a = 7;
-    int b = 9;
+    int a = 100;
+    int b = 20;
 
     printf("divisione: %d\n", a/b);
 
