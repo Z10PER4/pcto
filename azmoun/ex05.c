@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main()
 {
-    int a;
-    printf("%d\n", a);
+    char nome[]="ciao come stai";
+    printf("%s\n", nome);
 }

@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    int a = 1;
+    int a;
+    scanf("%d", &a);
     while (a<=100)
     {
         printf("%d\n", a);// può essere scritto pure a+1, ma in tal caso il while è solo (a<100)//
