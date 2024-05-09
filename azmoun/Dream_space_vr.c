@@ -21,10 +21,10 @@ int main()
     char b[50];
     char c[50];
     char d[50];
-    char fine[50];
     char start[100];
     char nomeai[100];
     char nometuoputtano[100];
+    int fine;
     int progetto;
     int arredo;
     int posizione_letto;
@@ -130,8 +130,8 @@ int main()
     if (progetto == 1)
     {
         sleep(wait_time);
-        letto:
-        gradual_text("Dove desideri spostarlo? (1: destra /2: sinistra)\n");
+        spostare:
+        gradual_text("Dove desideri spostare l'arredo? (1: destra /2: sinistra)\n");
          scanf("%d", &posizione_letto);
         if (posizione_letto==1)
         {
@@ -142,8 +142,8 @@ int main()
             {
                 sleep(1);
                 gradual_text("Perfetto! Allora adesso vuoi modificare la posizione di altri elemeneti della stanza o concludere la simulazione e salvare il progetto?\n");
-                gradual_text("(1: continua a modificare /2: salva il progetto)");
-                scanf("%s", fine);
+                gradual_text("(1: continua a modificare /2: salva il progetto): ");
+                scanf("%d", &fine);
                 if (fine == 1)
                 {
                     goto arredamento;
@@ -151,7 +151,7 @@ int main()
                 else if (fine == 2)
                 {
                     sleep(1);
-                    gradual_text("salvataggio in corso");
+                    gradual_text("salvataggio in corso attendere prego");
                     sleep(wait_time);
                     gradual_text(" 🔨");
                     sleep(wait_time);
@@ -161,15 +161,63 @@ int main()
                     sleep(2);
                     gradual_text("Salvataggio concluso con successo!\nOra ");
                     gradual_text(nometuoputtano);
-                    gradual_text(", purtroppo la versione di prova finisce qui, ma se l'app ti ha stuzzicato l'interesse lasciaci una buona recensione e aspetta che esca la versione definitiva\n Grazie per aver provato l'app ed arrivederci ");
+                    gradual_text(", purtroppo la versione di prova finisce qui, ma se l'app ti ha stuzzicato l'interesse lasciaci una buona recensione e aspetta che esca la versione definitiva\nGrazie per aver provato l'app ed arrivederci ");
                     gradual_text(nometuoputtano);
+                    printf("\n");
                 }
             }
             else if (aaaa==2)
             {
-                goto letto;
+                goto spostare;
             }
         }
-        
-    }  
+        else if (posizione_letto==2)
+        {
+            sleep(1);
+            gradual_text("Perfetto! Allora adesso vuoi modificare la posizione di altri elemeneti della stanza o concludere la simulazione e salvare il progetto?\n");
+            gradual_text("(1: continua a modificare /2: salva il progetto): ");
+            scanf("%d", &fine);
+            if (fine == 1)
+            {
+                goto arredamento;
+            }
+            else if (fine == 2)
+            {
+                sleep(1);
+                gradual_text("salvataggio in corso attendere prego");
+                sleep(wait_time);
+                gradual_text(" 🔨");
+                sleep(wait_time);
+                gradual_text(" 🔨");
+                sleep(wait_time);
+                gradual_text(" 🔨\n");
+                sleep(2);
+                gradual_text("Salvataggio concluso con successo!\nOra ");
+                gradual_text(nometuoputtano);
+                gradual_text(", purtroppo la versione di prova finisce qui, ma se l'app ti ha stuzzicato l'interesse lasciaci una buona recensione e aspetta che esca la versione definitiva\nGrazie per aver provato l'app ed arrivederci ");
+                gradual_text(nometuoputtano);
+                printf("\n");
+            }
+            
+            else if (aaaa==2)
+            {
+                goto spostare;
+            }
+        }   
+    } 
+    else if (progetto==2)
+    {
+        sleep(1);
+        goto spostare;
+    }
+    else if (progetto==3)
+    {
+        sleep(1);
+        goto spostare;
+    }
+    else if (progetto==4)
+    {
+        sleep(1);
+        goto spostare;
+    }
 }
